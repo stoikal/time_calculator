@@ -31,6 +31,8 @@ def add_time(start, duration, starting_day=None):
             result_hour = result_hour % 12
 
     result_period = 'AM' if result_is_AM else 'PM'
+    result_minute = str(result_minute) if result_minute >= 10 else '0' + str(result_minute)
+
     final_result_string = str(result_hour) + ':' + str(result_minute) + ' ' + result_period
 
     if starting_day :
